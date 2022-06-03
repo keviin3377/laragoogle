@@ -6,28 +6,24 @@
       </a>
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        <li class="nav-link px-2 text-white">Las apis ya desarrolladas = </li>
+        <li><a href="https://github.com/keviin3377/apisms" target="_blank"  class="nav-link px-2 text-white">&raquo;api de sms</a></li>
+        <li><a href="https://github.com/keviin3377/webspotify" target="_blank" class="nav-link px-2 text-white">&raquo;api de spotify</a></li>
+        <li><a href="https://github.com/keviin3377/laragoogle" target="_blank" class="nav-link px-2 text-white">&raquo;api de google</a></li>
+        <li><a href="https://github.com/keviin3377/facebooklog" target="_blank" class="nav-link px-2 text-white">&raquo;api de facebook</a></li>
       </ul>
-
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-      </form>
 
       @auth
         {{auth()->user()->name}}
-        <div class="text-end">
-          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Logout</a>
+        <div class="nav-link px-2 text-white">
+          <a href="{{ route('logout.perform') }}" class="btn btn-outline-light me-2">Cerrar sesion</a>
         </div>
       @endauth
-
+      
       @guest
-        <div class="text-end">
-          <a href="{{ route('login.perform') }}" class="btn btn-outline-light me-2">Login</a>
-          <a href="{{ route('register.perform') }}" class="btn btn-warning">Sign-up</a>
+        <div class="nav-link px-2 text-white">
+          <a href="{{ route('login.perform') }}" class="btn btn-outline-light me-2">Iniciar sesion</a>
+          <a href="{{ route('register.perform') }}" class="btn btn-warning">Registrarse</a>
         </div>
       @endguest
     </div>
